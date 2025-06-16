@@ -1,68 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Event Calendar</title>
-    <link rel="stylesheet" href="https://uicdn.toast.com/calendar/latest/tui-calendar.css" />
-    <script src="https://uicdn.toast.com/calendar/latest/tui-calendar.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f0f0f0;
-        }
-        .calendar-container {
-            margin: 20px;
-        }
-        .calendar {
-            background-color: #fff;
-            padding: 10px;
-            border-radius: 8px;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="calendar-container">
-        <h1>Library Event Calendar</h1>
-        <div id="calendar" class="calendar"></div>
-    </div>
-
-    <script>
-        const calendar = new tui.Calendar('#calendar', {
-            defaultView: 'month',  // Month view
-            taskView: true,        // Enable task view
-            scheduleView: true,    // Enable schedule view
-            useDetailPopup: true   // Enable event details popup
-        });
-
-        // Example events (You can replace this with your own backend data later)
-        const events = [
-            {
-                id: '1',
-                title: 'Book Club - Meeting Room 1',
-                start: '2025-05-13T14:00:00',
-                end: '2025-05-13T16:00:00',
-                location: 'Meeting Room 1',
-                category: 'time',
-                description: 'Join us for a discussion of the latest book.'
-            },
-            {
-                id: '2',
-                title: 'Story Time - Children\'s Area',
-                start: '2025-05-13T10:00:00',
-                end: '2025-05-13T11:00:00',
-                location: 'Children\'s Area',
-                category: 'time',
-                description: 'Fun stories for kids.'
-            }
-        ];
-
-        // Add events to the calendar
-        calendar.createSchedules(events);
-    </script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Schedule Display</title>
+  </head>
+  <body class="bg-base-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
